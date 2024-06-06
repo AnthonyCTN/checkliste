@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Connexion</h2>
+        <form id="login-form" action="connexion.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mot_de_passe">Mot de passe:</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" required><br>
+            <button type="submit">Se connecter</button>
+            <a href="inscription.html" class="button-link">S'inscrire</a>
+        </form>
+        <div id="error-message" class="hidden"></div>
+    </div>
+</body>
+</html>
+
+
+<style>
+    /* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center; /* Centrer le contenu */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button, .button-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-link {
+    background-color: #555;
+    margin-left: 10px;
+}
+
+button:hover, .button-link:hover {
+    opacity: 0.8;
+}
+
+/* Styles pour le message d'erreur */
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: #e74c3c;
+    margin-top: 20px;
+}
+
+</style>
